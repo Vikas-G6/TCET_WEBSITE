@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="LoginForm.css" />
+</head>
+
+<body>
+    <div class="box">
+        <div class="form-box">
+            <h2 align="center">LoginForm</h2>
+            <table>
+                <form form="login_form" onsubmit="submitform()">
+
+                    <tr>
+                        <td>
+                            <h4>Username</h4>
+                        </td>
+                        <td>
+                            <input id="input-box" type="text" placeholder="Enter your name/email id" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Password</h4>
+                        </td>
+                        <td>
+                            <input id="input-box" type="password" placeholder="Enter your password" />
+                        </td>
+                    </tr>
+            </table>
+
+            <div class="password">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+
+            </div>
+            <div class="login-btn">
+                <input id="btn" type="submit" value="Login" />
+                <input id="btn" type="button" value="Sign up" onclick="Create()" />
+            </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function submitform() {
+            alert("Login Successful!");
+        }
+        function Create() {
+            window.location = "Signup.html";
+        }
+    </script>
+</body>
+
+</html>
