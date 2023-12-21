@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link rel="stylesheet" href="Signup.css" />
+</head>
+
+<body>
+
+    <body>
+        <div class="box">
+            <div class="form-box">
+                <h2>CREATE YOUR ACCOUNT</h2>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input id="input-box" type="text" placeholder="Enter your name" id="n1"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input id="input-box" type="text" placeholder="Enter your email id" id="e1"></td>
+                    </tr>
+                    <tr>
+                        <td>Set Password</td>
+                        <td><input id="input-box" type="password" placeholder="Set your password" id="p1"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input id="input-box" type="password" placeholder="Confirm your password" id="p2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><div class="input"><input id="btn" type="submit" value="Create" onclick="create_account()"></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function create_account() {
+                var n = document.getElementById("n1").value;
+                var e = document.getElementById("e1").value;
+                var p = document.getElementById("p1").value;
+                var cp = document.getElementById("p2").value;
+
+                var letter = /^[A-Za-z\s]+$/;
+                var email_val = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+                if (n == "" || e == "" || p == "" || cp == "") {
+                    alert("Enter details correctly");
+                } else if (!letter.test(n)) {
+                    alert("Name is incorrect, it must contain alphabet characters only");
+                } else if (!email_val.test(e)) {
+                    alert("Invalid email format");
+                } else if (p != cp) {
+                    alert("Password does not match");
+                }
+                else if (document.getElementById("p1").value.length > 12) {
+                    alert("Password maximum length is 12");
+                }
+                else if (document.getElementById("p1").value.length < 6) {
+                    alert("Password minimum length should be 6");
+                }
+                else {
+                    alert("Your account has been successfully created");
+
+                    <!--it is optional enter URL-->
+                    window.location = "http://127.0.0.1:5501/TCETFF.html"
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

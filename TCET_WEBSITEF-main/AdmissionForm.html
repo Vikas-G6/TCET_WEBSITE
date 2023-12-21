@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            background: #d6fff5;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(11, 97, 226);
+            text-decoration: underline;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-decoration: underline;
+        }
+
+        .p1 {
+            text-align: center;
+            font-size: 20px;
+            color: rgb(233, 8, 222);
+        }
+
+        .logo {
+            display: block;
+            margin: auto;
+            width: 70%;
+            align-content: center;
+            border: 2px solid black;
+        }
+
+        .box {
+            border: 2px solid black;
+            display: block;
+            width: 60%;
+            margin: auto;
+            align-content: center;
+            background-color: rgb(243, 239, 239);
+        }
+
+        @media (min-width : 600px) and (max-width : 900px) {
+            .body {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img class="logo" src="image/tcetimage.jpg" alt=" logo">
+
+    <h1>College Addmission Form</h1>
+    <p class="" p1>Welcome to our College's addimission Center. Please use this form to apply for your addimission to
+        our
+        college. College addmission form are processed whithin 48 hours</p>
+    <hr>
+    <marquee style="
+    color: red;
+    font-size: 25px;
+    border: 2px solid black;
+    background: white;
+    font-style: italic;">Last date is 30/4/2023</marquee>
+    <h2>Personal Detail</h2>
+    <div class="box">
+        <form>
+            <label for="fname">Student Name</label>
+            <input type="text" id="fname" name="fname" placeholder="First name">
+            <input type="text" id="fname" name="fname" placeholder="last name"><br><br>
+            <label for="mname">Mother Name</label>
+            <input type="text" id="mname" name="mname" placeholder="Mother name"><br><br>
+            <label for="faname">Father Name</label>
+            <input type="text" id="faname" name="faname" placeholder="Father name"><br><br>
+            <label for="dob">Date of birth</label>
+            <input type="date" id="dob" name="dob"><br><br>
+            <label for="num">Mobile Number</label>
+            <input type="tel" id="num" name="num" placeholder="Enter your phone number"><br><br>
+            <label for="mail">E-mail</label>
+            <input type="tel" id="mail" name="mail" placeholder="abc@gmail.com"><br><br>
+            <label for="address">Address</label>
+            <input type="address" id="address" name="address" placeholder="" style="width: 50%;"><br><br>
+    </div>
+    <hr>
+    <hr>
+    <div class="box">
+
+        <h2>Academic Detail's</h2>
+        <h3>Past Qualification</h3>
+        <label for="kname">SSC</label>
+        <input type="checkbox" id="mname"><br>
+        <label for="kname">HSC</label>
+        <input type="checkbox" id="mname"><br>
+        <label for="kname">DIPLOMA</label>
+        <input type="checkbox" id="mname"><br><br>
+        <label for="Dept">Depeartment</label>
+        <input type="text" id="dept" name="dept" placeholder="Depeartment name"><br><br>
+        <label for="ay">Academic Year</label>
+        <input type="year" id="ay" name="ay"><br><br>
+        <p>Addmissionin year</p>
+        <input type="radio" id="SE" name="Addimission_in_year" value="SE">
+        <label for="html">SE</label><br>
+        <input type="radio" id="TE" name="Addimission_in_year" value="TE">
+        <label for="css">TE</label><br>
+        <input type="radio" id="BE" name="Addimission_in_year" value="BE">
+        <label for="javascript">BE</label><br><br>
+        <label for="doa">Date of Addmission</label>
+        <input type="date" id="doa" name="doa"><br><br>
+        <input type="submit" value="submit"><br><br>
+        </form>
+    </div>
+</body>
+
+</html>
